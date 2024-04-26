@@ -67,7 +67,7 @@ An episode is ended only when the Agent collides with a Target. Not when a Targe
 
 The script has 1 sensor observation (apart from the rays) to let the agent know if it is grounded or not.
 
-I also added a boolean jumpRequested that gets checked in the Update() method for the heuristic mode, because the spacebar was very unresponsive in heuristic mode. I think this was an issue caused by frametimes and discrete actions.
+We also added a boolean jumpRequested that gets checked in the Update() method for the heuristic mode, because the spacebar was very unresponsive in heuristic mode. I think this was an issue caused by frametimes and discrete actions.
 
 #### Mover Script
 
@@ -82,4 +82,4 @@ Once all the bugs were removed (which took a long time), the training proceeded 
 ![Image Description](chart.png)
 ![Image Description](chart2.png)
 
-Both were trained in parallel with 10 training environments. The only change I made in the second training (yellow line) was the ray length, which made the model learn a lot faster at the beginning. This makes sense, because the ray lengt was tuned so the agent should jumpt the moment the object comes into the range of the ray. But for both, the agent did not improve after around 100000 steps. This also makes sense, because the agent only has to learn one action.
+Both were trained in parallel with 10 training environments. The only change we made in the second training (yellow line) was the ray length, which made the model learn a lot faster at the beginning. This makes sense, because the ray lengt was tuned so the agent should jumpt the moment the object comes into the range of the ray. But for both, the agent did not improve after around 100000 steps. This also makes sense, because the agent only has to learn one action.
